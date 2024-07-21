@@ -1,0 +1,61 @@
+{
+	"name": "git-commit-msg-from-branch",
+	"displayName": "commit-msg-from-branch",
+	"description": "commit-msg-from-branch",
+	"version": "0.0.1",
+	"publisher": "JustinCode",
+	"repository": "https://github.com/Microsoft/vscode-extension-samples/helloworld-sample",
+	"engines": {
+		"vscode": "^1.74.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"npm.packageManage": "pnpm",
+	"activationEvents": [],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "git-commit-msg-from-branch.getMessageFromBranchName",
+				"title": "GitMsg: Get Commit Message from Branch Name",
+				"icon": "$(issue-draft)"
+			}
+		],
+		"menus": {
+			"scm/title": [
+				{
+					"command": "git-commit-msg-from-branch.getMessageFromBranchName",
+					"group": "navigation@1"
+				}
+			]
+		},
+		"configuration": {
+			"title": "git-commit-msg-from-branch",
+			"properties": {
+				"git-commit-msg-from-branch.commitMessageRegex": {
+					"type": "string",
+					"default": "",
+					"description": "Regex to extract commit message from branch name"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint \"src/**/*.ts\"",
+		"watch": "tsc -watch -p ./"
+	},
+	"devDependencies": {
+		"@types/node": "^18",
+		"@types/vscode": "^1.73.0",
+		"@typescript-eslint/eslint-plugin": "^7.14.0",
+		"@typescript-eslint/parser": "^7.14.0",
+		"eslint": "^8.26.0",
+		"typescript": "^5.5.2"
+	},
+	"extensionDependencies": [
+		"vscode.git"
+	]
+}
