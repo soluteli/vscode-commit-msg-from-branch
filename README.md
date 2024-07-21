@@ -31,3 +31,4 @@ Guide for this sample: https://code.visualstudio.com/api/get-started/your-first-
 1. [Git integration for Visual Studio Code](https://github.com/microsoft/vscode/blob/main/extensions/git/README.md#git-integration-for-visual-studio-code)
 2. [Vscode API](https://code.visualstudio.com/api/references/contribution-points#contributes.configuration)
 3. [中文文档](https://liiked.github.io/VS-Code-Extension-Doc-ZH/#/working-with-extensions/bundling-extension)
+4. [vsce publish fails - VS Code Extension using pnpm/yarn](https://stackoverflow.com/questions/59798905/vsce-publish-fails-vs-code-extension-using-pnpm-yarn)
